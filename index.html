@@ -3,8 +3,172 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
+    <style>
+        table{
+            margin: 1em auto;
+        }
+
+        tr:first-child{
+            border-top:solid;
+        }
+
+        tr:nth-child(3n) td{
+            border-bottom: solid;
+        }
+
+        td{
+            height: 25px;
+            width: 25px;
+            border: 1px solid;
+            text-align: center;
+        }
+
+        td:first-child{
+            border-left: solid;
+        }
+
+        td:nth-child(3n){
+            border-right: solid;
+        }
+
+        td input{
+            height: 25px;
+            width: 25px;
+        }
+
+    </style>
 </head>
 <body>
+<table id="grid">
+    <tr class="row">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>2</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
 
+    <tr class="row">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>4</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr class="row">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr class="row">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>6</td>
+        <td></td>
+    </tr>
+
+    <tr class="row">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr class="row">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr class="row">
+        <td>1</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr class="row">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr class="row">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>9</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
 </body>
+<script>
+    window.onload = function(){
+        var grid = [];
+        setValues(grid);
+    };
+
+    function setValues(grid){
+        var obj = document.getElementsByTagName('td');
+        var inputValue;
+        for(var prop in obj){
+            if(obj[prop].innerHTML == ''){
+                obj[prop].innerHTML += '<input id="value" type="text" value="'+ obj[prop].innerHTML+'" />'
+            }
+        }
+        for(var i =0; i < 9; i++){
+            for(var j =0; j < 9; j++){
+               grid[i][j] = '';
+            }
+
+        }
+    }
+</script>
 </html>
