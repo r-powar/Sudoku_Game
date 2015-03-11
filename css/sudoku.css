@@ -1,0 +1,35 @@
+table{
+    margin: 1em auto;
+}
+
+tr:first-child{
+    border-top:solid;
+}
+
+tr:nth-child(3n) td{
+    border-bottom: solid;
+}
+
+td{
+    height: 25px;
+    width: 25px;
+    border: 1px solid;
+    text-align: center;
+}
+
+td:first-child{
+    border-left: solid;
+}
+
+td:nth-child(3n){
+    border-right: solid;
+}
+
+td input{
+    height: 25px;
+    width: 25px;
+}
+
+button{
+    margin: 1em auto;
+}
