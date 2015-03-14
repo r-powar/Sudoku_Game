@@ -1,7 +1,7 @@
 # Sudoku_Game
 
 Note
-1. I am still working on the RequireJS implementation, i keep getting anonymous module definition error which i am investigating 
+1. Implemented with requirejs, the modules were missing some dependencies initially
 
 How the game works
 1. The user is initally presented an empty board and two buttons. First button will initialize the board with preset values.
